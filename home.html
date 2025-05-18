@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CareerCraft AI</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Background with blur */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      filter: 5px;
+      z-index: -2;
+    }
+
+    /* Dark overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.55);
+      z-index: -1;
+    }
+
+    /* Center container */
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* Animated text */
+    h1 {
+      font-size: 4em;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+      opacity: 0;
+      animation: scaleFadeIn 1.5s forwards;
+    }
+
+    /* Animated button */
+    .next-button {
+      display: inline-block;
+      padding: 15px 40px;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: white;
+      background-color: #00b894;
+      border-radius: 10px;
+      text-decoration: none;
+      opacity: 0;
+      animation: slideFadeIn 1.5s forwards;
+      animation-delay: 1.7s;
+      transition: background-color 0.3s ease;
+    }
+
+    .next-button:hover {
+      background-color: #019875;
+    }
+
+    /* Animations */
+    @keyframes scaleFadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CareerCraft AI</h1>
+    <a href="13.html" class="next-button">Explore More</a>
+  </div>
+</body>
+</html>
